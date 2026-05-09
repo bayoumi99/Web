@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speakers</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!-- Navbar الموحد -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+        <!-- أيقونة العربة والقائمة المنسدلة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2 style="padding:20px;">Speakers</h2>
+
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/Speaker.jpg">
+        <h3>Speaker original</h3>
+        <p class="price">$300</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speaker original', 300)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speaker original')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speaker original')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speaker1.jpg">
+        <h3>Speakers1</h3>
+        <p class="price">$350</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers1', 350)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers1')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers1')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers2.jpg">
+        <h3>Speakers2</h3>
+        <p class="price">$380</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers2', 380)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers2')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers2')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers3.jpg">
+        <h3>Speakers3</h3>
+        <p class="price">$400</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers3', 400)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers3')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers3')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 5 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers4.jpg">
+        <h3>Speakers4</h3>
+        <p class="price">$430</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers4', 430)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers4')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers4')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 6 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers5.jpg">
+        <h3>Speakers5</h3>
+        <p class="price">$460</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers5', 460)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers5')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers5')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 7 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers6.jpg">
+        <h3>Speakers6</h3>
+        <p class="price">$490</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers6', 490)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers6')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers6')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 8 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers7.jpg">
+        <h3>Speakers7</h3>
+        <p class="price">$500</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers7', 500)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers7')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers7')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 9 -->
+    <div class="product-card">
+        <img src="img/Speakers/Speakers8.jpg">
+        <h3>Speakers8</h3>
+        <p class="price">$550</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Speakers8', 550)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Speakers8')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Speakers8')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ربط ملف الـ JS -->
+<script src="script.js"></script>
+</body>
+</html>

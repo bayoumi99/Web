@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css">
+    <!-- هنربط ملف الـ CSS الجديد هنا -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+        <!-- أيقونة العربة الجديدة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <!-- القائمة المنسدلة للعربة -->
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li class="empty-msg">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Products -->
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/laptop.jpg">
+        <h3>Laptop</h3>
+        <p class="price">$1200</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Laptop', 1200)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Laptop')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Laptop')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/Earphone.jpg">
+        <h3>Earphone</h3>
+        <p class="price">$50</p> <!-- عدلت السعر عشان التجربة -->
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone', 50)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/watch.jpg">
+        <h3>Smart Watch</h3>
+        <p class="price">$250</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Smart Watch', 250)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Smart Watch')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Smart Watch')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/headphone1.jpg">
+        <h3>Headphone</h3>
+        <p class="price">$180</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Headphone', 180)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Headphone')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Headphone')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- هنربط ملف الجافا سكريبت في الآخر -->
+<script src="script.js"></script>
+</body>
+</html>

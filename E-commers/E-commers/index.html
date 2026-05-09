@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tec Store</title>
+    <!-- تأكد إن ملفات الـ CSS مربوطة صح -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css"> 
+</head>
+<body>
+
+<!-- Navbar الموحد المضاف إليه العربة -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <li><a href="about%20us.html">About Us</a></li>
+        
+        <!-- جزء العربة الذكي -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="hero">
+    <div class="hero-text">
+        <h2>Bestsellers</h2>
+        <h1>Wireless<br>HEADPHONE</h1>
+        <a href="products.html">
+            <button>Shop By Category</button>
+        </a>
+    </div>
+
+    <div class="hero-img">
+        <img src="img/headphone.png" alt="headphone">
+    </div>
+</div>
+
+<div class="categories">
+    <a href="Headphone.html" class="card-link">
+        <div class="card">
+            <img src="img/headphone1.jpg">
+            <p>headphone</p>
+        </div>
+    </a>
+    <a href="Speakers.html" class="card-link">
+        <div class="card">
+            <img src="img/Speaker.jpg">
+            <p>Speakers</p>
+        </div>
+    </a>
+    <a href="Laptop.html" class="card-link">
+        <div class="card">
+            <img src="img/laptop.jpg">
+            <p>Laptop</p>
+        </div>
+    </a>
+    <a href="Earphone.html" class="card-link">
+        <div class="card">
+            <img src="img/Earphone.jpg">
+            <p>Earphone</p>
+        </div>
+    </a>
+    <a href="Smart Watch.html" class="card-link">
+        <div class="card">
+            <img src="img/watch.jpg">
+            <p>Watch</p>
+        </div>
+    </a>
+</div>
+
+<!-- ربط الجافا سكريبت مهم جداً هنا عشان العربة تشتغل -->
+<script src="script.js"></script>
+</body>
+</html>

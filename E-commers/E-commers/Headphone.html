@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Headphone</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!-- Navbar الموحد -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+        <!-- أيقونة العربة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2 style="padding:20px;">Headphone</h2>
+
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/headphone1.jpg">
+        <h3>headphone prime</h3>
+        <p class="price">$900</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone prime', 900)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone prime')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone prime')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone2.jpg">
+        <h3>headphone2max</h3>
+        <p class="price">$600</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone2max', 600)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone2max')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone2max')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone3.jpg">
+        <h3>headphone3max</h3>
+        <p class="price">$500</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone3max', 500)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone3max')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone3max')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone4.jpg">
+        <h3>headphone promax</h3>
+        <p class="price">$400</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone promax', 400)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone promax')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone promax')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 5 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone5.jpg">
+        <h3>headphone pro</h3>
+        <p class="price">$500</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone pro', 500)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 6 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone6.jpg">
+        <h3>headphonemax</h3>
+        <p class="price">$300</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphonemax', 300)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphonemax')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphonemax')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 7 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone7.jpg">
+        <h3>headphone7max</h3>
+        <p class="price">$200</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone7max', 200)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone7max')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone7max')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 8 -->
+    <div class="product-card">
+        <img src="img/headphones/headphone8.jpg">
+        <h3>headphone</h3>
+        <p class="price">$100</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'headphone', 100)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'headphone')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'headphone')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ربط ملف الـ JS -->
+<script src="script.js"></script>
+</body>
+</html>

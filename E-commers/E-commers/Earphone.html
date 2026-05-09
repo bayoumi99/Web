@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Earphone</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!-- Navbar الموحد لكل الصفحات -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+        <!-- أيقونة العربة والقائمة المنسدلة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2 style="padding:20px;">Earphone</h2>
+
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/Earphone.jpg">
+        <h3>Earphone prime</h3>
+        <p class="price">$150</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone prime', 150)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone prime')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone prime')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone1.jpg">
+        <h3>Earphone1 pro</h3>
+        <p class="price">$100</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone1 pro', 100)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone1 pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone1 pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone2.jpg">
+        <h3>Earphone2 pro</h3>
+        <p class="price">$100</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone2 pro', 100)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone2 pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone2 pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone3.jpg">
+        <h3>Earphone3 pro</h3>
+        <p class="price">$120</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone3 pro', 120)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone3 pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone3 pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 5 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone4.jpg">
+        <h3>EirPods pro</h3>
+        <p class="price">$125</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'EirPods pro', 125)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'EirPods pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'EirPods pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 6 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone5.jpg">
+        <h3>Earphone Faster</h3>
+        <p class="price">$130</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone Faster', 130)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone Faster')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone Faster')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 7 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone6.jpg">
+        <h3>Earphone 13HRS</h3>
+        <p class="price">$135</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone 13HRS', 135)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone 13HRS')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone 13HRS')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 8 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone7.jpg">
+        <h3>Earphone Ugreen</h3>
+        <p class="price">$140</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone Ugreen', 140)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone Ugreen')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone Ugreen')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 9 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone8.jpg">
+        <h3>one</h3>
+        <p class="price">$145</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'one', 145)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'one')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'one')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 10 -->
+    <div class="product-card">
+        <img src="img/Earphones/Earphone9.jpg">
+        <h3>Earphone baseus</h3>
+        <p class="price">$150</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Earphone baseus', 150)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Earphone baseus')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Earphone baseus')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ربط ملف الجافا سكريبت -->
+<script src="script.js"></script>
+</body>
+</html>

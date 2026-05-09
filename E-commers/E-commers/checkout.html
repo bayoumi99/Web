@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Tec Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <style>
+        /* ستايل الصفحة العام - أبيض ونظيف */
+        body {
+            background-color: #f4f7f6; /* رمادي فاتح جداً للخلفية الأساسية */
+            margin: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: #333;
+        }
+
+        .checkout-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 50px 20px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* الكروت باللون الأبيض الصريح مع ظل ناعم */
+        .billing-form, .order-summary {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* ظل خفيف جداً مودرن */
+            min-width: 380px;
+            flex: 1;
+            border: 1px solid #e1e8e5;
+        }
+
+        h2 { 
+            margin-bottom: 30px; 
+            color: #ff9800; 
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-align: left;
+            position: relative;
+        }
+
+        /* حقول الإدخال - ستايل مودرن */
+        .input-group { margin-bottom: 20px; }
+        .input-group label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .input-group input {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background: #fdfdfd;
+            color: #333;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box; /* لضمان عدم خروج الإدخال عن الحاوية */
+        }
+
+        .input-group input:focus {
+            border-color: #ff9800;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.1);
+            outline: none;
+        }
+
+        /* الجدول - بسيط ومنظم */
+        table { width: 100%; border-collapse: collapse; }
+        table th { 
+            text-align: left; 
+            padding: 15px 10px; 
+            border-bottom: 2px solid #f0f0f0; 
+            color: #999;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        table td { 
+            padding: 20px 10px; 
+            border-bottom: 1px solid #f9f9f9; 
+            color: #444;
+            font-weight: 500;
+        }
+
+        .total-row td {
+            font-size: 1.5rem;
+            color: #ff9800 !important;
+            font-weight: 800;
+            border-top: 2px solid #ff9800;
+            border-bottom: none;
+            padding-top: 25px;
+        }
+
+        /* زر التأكيد البرتقالي */
+        .confirm-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .confirm-btn:hover { 
+            background-color: #e68a00;
+            transform: translateY(-2px);
+        }
+
+        /* النافبار - ستايل أبيض */
+        .navbar { 
+            background: #ffffff; 
+            padding: 15px 40px; 
+            border-bottom: 1px solid #eee;
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
+        .navbar .logo { color: #ff9800; margin: 0; font-size: 1.6rem; }
+        .navbar .menu { display: flex; list-style: none; gap: 20px; margin: 0; }
+        .navbar .menu li a { color: #555; text-decoration: none; font-weight: 600; }
+        .navbar .menu li a:hover { color: #ff9800; }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Shop</a></li>
+    </ul>
+</div>
+
+<div class="checkout-container">
+    <!-- فورم البيانات -->
+    <div class="billing-form">
+        <h2>Billing Details</h2>
+        <form id="checkout-form">
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="John Doe" required>
+            </div>
+            <div class="input-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="012 3456 7890" required>
+            </div>
+            <div class="input-group">
+                <label>Shipping Address</label>
+                <input type="text" id="address" placeholder="Street, Building, Apartment" required>
+            </div>
+            <div class="input-group">
+                <label>City</label>
+                <input type="text" id="city" placeholder="e.g. Cairo" required>
+            </div>
+            <button type="submit" class="confirm-btn">Place Order Now</button>
+        </form>
+    </div>
+
+    <!-- ملخص الطلب -->
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="checkout-items-body">
+                <!-- Data from JS -->
+            </tbody>
+            <tfoot>
+                <tr class="total-row">
+                    <td colspan="2">Total</td>
+                    <td id="final-total">$0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+
+<script>
+    function loadCheckout() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let tableBody = document.getElementById('checkout-items-body');
+        let finalTotal = 0;
+        tableBody.innerHTML = '';
+
+        if (Array.isArray(cart)) {
+            cart.forEach(item => {
+                let subtotal = item.price * item.qty;
+                finalTotal += subtotal;
+                tableBody.innerHTML += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td style="color:#888;">x${item.qty}</td>
+                        <td style="font-weight:bold;">$${subtotal}</td>
+                    </tr>`;
+            });
+        }
+        document.getElementById('final-total').innerText = '$' + finalTotal;
+    }
+
+    document.getElementById('checkout-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const userName = document.getElementById('name').value;
+        alert('Thank you, ' + userName + '! Your order has been placed successfully.');
+        localStorage.removeItem('cart'); 
+        window.location.href = 'index.html'; 
+    });
+
+    loadCheckout();
+</script>
+
+</body>
+</html>

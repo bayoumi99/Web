@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watch</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!-- Navbar الموحد -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+        <!-- أيقونة العربة والقائمة المنسدلة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2 style="padding:20px;">Watch</h2>
+
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/watch.jpg">
+        <h3>Watch12</h3>
+        <p class="price">$100</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch12', 100)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch12')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch12')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch1.jpg">
+        <h3>Watch orange</h3>
+        <p class="price">$99</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch orange', 99)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch orange')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch orange')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch2.jpg">
+        <h3>Watch black 1</h3>
+        <p class="price">$110</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch black 1', 110)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch black 1')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch black 1')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch3.jpg">
+        <h3>Watch white</h3>
+        <p class="price">$115</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch white', 115)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch white')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch white')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 5 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch4.jpg">
+        <h3>Watch blue</h3>
+        <p class="price">$90</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch blue', 90)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch blue')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch blue')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 6 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch5.jpg">
+        <h3>Watch black 2</h3>
+        <p class="price">$120</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch black 2', 120)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch black 2')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch black 2')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 7 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch6.jpg">
+        <h3>Watch iron</h3>
+        <p class="price">$200</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch iron', 200)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch iron')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch iron')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 8 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch7.jpg">
+        <h3>Watch chine</h3>
+        <p class="price">$80</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch chine', 80)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch chine')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch chine')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 9 -->
+    <div class="product-card">
+        <img src="img/Watchs/Watch8.jpg">
+        <h3>Watch 1.97</h3>
+        <p class="price">$150</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Watch 1.97', 150)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Watch 1.97')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Watch 1.97')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ربط ملف الـ JS -->
+<script src="script.js"></script>
+</body>
+</html>

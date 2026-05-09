@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laptops</title>
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+<!-- Navbar الموحد -->
+<div class="navbar">
+    <h2 class="logo">Tec Store</h2>
+    <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li>Shop</li>
+        <!-- أيقونة العربة والقائمة المنسدلة -->
+        <li class="cart-wrapper">
+            <div id="cart-icon" onclick="toggleCart()">
+                🛒 <span id="cart-count">0</span>
+            </div>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <ul id="cart-items-list">
+                    <li style="text-align:center; padding:10px;">العربة فارغة</li>
+                </ul>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total-price">0</span></p>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<h2 style="padding:20px;">Laptops</h2>
+
+<div class="products">
+
+    <!-- المنتج 1 -->
+    <div class="product-card">
+        <img src="img/laptop.jpg">
+        <h3>HP Laptop</h3>
+        <p class="price">$900</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'HP Laptop', 900)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'HP Laptop')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'HP Laptop')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 2 -->
+    <div class="product-card">
+        <img src="img/laptop2.jpg">
+        <h3>Dell Laptop Pro</h3>
+        <p class="price">$2100</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Dell Laptop Pro', 2100)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Dell Laptop Pro')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Dell Laptop Pro')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 3 -->
+    <div class="product-card">
+        <img src="img/laptop3.jpg">
+        <h3>Laptop Gaming X</h3>
+        <p class="price">$1900</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Laptop Gaming X', 1900)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Laptop Gaming X')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Laptop Gaming X')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 4 -->
+    <div class="product-card">
+        <img src="img/laptop4.jpg">
+        <h3>Dell G16</h3>
+        <p class="price">$800</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Dell G16', 800)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Dell G16')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Dell G16')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 5 -->
+    <div class="product-card">
+        <img src="img/laptop5.jpg">
+        <h3>Dell Laptop 1600</h3>
+        <p class="price">$1600</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Dell Laptop 1600', 1600)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Dell Laptop 1600')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Dell Laptop 1600')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 6 -->
+    <div class="product-card">
+        <img src="img/laptop.jpg">
+        <h3>HP Laptop Silver</h3>
+        <p class="price">$800</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'HP Laptop Silver', 800)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'HP Laptop Silver')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'HP Laptop Silver')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 7 -->
+    <div class="product-card">
+        <img src="img/laptop2.jpg">
+        <h3>Dell Laptop 1300</h3>
+        <p class="price">$1300</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Dell Laptop 1300', 1300)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Dell Laptop 1300')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Dell Laptop 1300')">+</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنتج 8 -->
+    <div class="product-card">
+        <img src="img/laptop3.jpg">
+        <h3>Gaming laptop Z</h3>
+        <p class="price">$1500</p>
+        <div class="action-area">
+            <button class="add-btn" onclick="addToCart(this, 'Gaming laptop Z', 1500)">🛒 Add</button>
+            <div class="counter" style="display: none;">
+                <button onclick="changeQty(this, -1, 'Gaming laptop Z')">-</button>
+                <span class="qty">1</span>
+                <button onclick="changeQty(this, 1, 'Gaming laptop Z')">+</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- ربط ملف الـ JS -->
+<script src="script.js"></script>
+</body>
+</html>
